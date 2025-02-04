@@ -16,7 +16,7 @@ function getCsrfToken() {
     return null
 }
 
-const apiURL = 'http://localhost:8000/'
+const apiURL = process.env.REACT_APP_API_URL
 
 
 export const register = createAsyncThunk(

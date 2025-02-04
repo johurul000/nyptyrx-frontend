@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
 
-const apiURL = 'http://localhost:8000/'
+const apiURL = process.env.REACT_APP_API_URL
 
 
 

@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 
-const apiURL = 'http://localhost:8000/'
+const apiURL = process.env.REACT_APP_API_URL
 
 export const fetchDashboardMetrics = createAsyncThunk(
     'dashboard/fetchMetrics',
