@@ -26,7 +26,7 @@ const InventoryTable = ({ medicines, onEdit, onDelete }) => {
       {/* Table Layout for medium and larger screens */}
       <div className="hidden custom:block bg-white dark:bg-card rounded-lg shadow-lg overflow-x-auto">
         <table className="min-w-full table-fixed">
-          <thead className="bg-lightCard dark:bg-card text-white">
+          <thead className="bg-lightCard dark:bg-card text-darkText dark:text-grayText">
             <tr>
               <th className="px-4 py-2 border-b text-left">Medicine Name</th>
               {/* Uncomment the next line if you want to display Description */}

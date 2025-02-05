@@ -15,6 +15,7 @@ import {
   Legend,
   BarElement,
 } from 'chart.js';
+import FullPageLoader from '../../components/FullPageLoader';
 
 // Register Chart.js components
 ChartJS.register(
@@ -103,11 +104,7 @@ const Dashboard = () => {
   };
 
   if (status === 'loading') {
-    return (
-      <Layout>
-        <div className="text-darkText dark:text-grayText">Loading...</div>
-      </Layout>
-    );
+    return <FullPageLoader/>
   }
 
   return (
@@ -140,19 +137,19 @@ const Dashboard = () => {
         {/* KPI Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md text-center">
-            <h6 className="text-grayText dark:text-grayText">Total Stock Value</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Total Stock Value</h6>
             <h3 className="text-highlight dark:text-highlight text-2xl font-bold">₹{totalStockValue}</h3>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md text-center">
-            <h6 className="text-grayText dark:text-grayText">Medicines in Inventory</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Medicines in Inventory</h6>
             <h3 className="text-highlight dark:text-highlight text-2xl font-bold">{totalInventory}</h3>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md text-center">
-            <h6 className="text-grayText dark:text-grayText">Low-Stock Alerts</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Low-Stock Alerts</h6>
             <h3 className="text-red-600 dark:text-red-600 text-2xl font-bold">{lowStockMedicines}</h3>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md text-center">
-            <h6 className="text-grayText dark:text-grayText">Upcoming Expiry</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Upcoming Expiry</h6>
             <h3 className="text-yellow-600 dark:text-yellow-600 text-2xl font-bold">{expiringMedicines}</h3>
           </div>
         </div>
@@ -160,7 +157,7 @@ const Dashboard = () => {
         {/* Revenue and Sales Summary */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Day Sales Summary</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Day Sales Summary</h6>
             <p className="mb-1">
               Daily Earnings: <strong className="text-highlight dark:text-highlight">₹{dailyEarnings}</strong>
             </p>
@@ -169,7 +166,7 @@ const Dashboard = () => {
             </p>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Monthly Sales Summary</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Monthly Sales Summary</h6>
             <p className="mb-1">
               Monthly Earnings: <strong className="text-highlight dark:text-highlight">₹{monthlyEarning}</strong>
             </p>
@@ -178,7 +175,7 @@ const Dashboard = () => {
             </p>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Revenue Summary</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Revenue Summary</h6>
             <p className="mb-1">
               Total Earnings: <strong className="text-highlight dark:text-highlight">₹{totalSales}</strong>
             </p>
@@ -187,19 +184,19 @@ const Dashboard = () => {
             </p>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Daily Sales Performance</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Daily Sales Performance</h6>
             <div className="h-48">
               <Line data={dailySalesData} options={{ responsive: true, maintainAspectRatio: false }} />
             </div>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Weekly Revenue Distribution</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Weekly Revenue Distribution</h6>
             <div className="h-48">
               <Bar data={weeklyRevenueData} options={{ responsive: true, maintainAspectRatio: false }} />
             </div>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Monthly Revenue Distribution</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Monthly Revenue Distribution</h6>
             <div className="h-48">
               <Bar data={monthlyRevenueData} options={{ responsive: true, maintainAspectRatio: false }} />
             </div>
@@ -209,7 +206,7 @@ const Dashboard = () => {
         {/* Top-Selling Products, Low-Stock, and Expiring Medicines */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Top-Selling Products</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Top-Selling Products</h6>
             <table className="w-full mt-3">
               <thead className="bg-highlight dark:bg-highlight text-white">
                 <tr>
@@ -230,7 +227,7 @@ const Dashboard = () => {
             </table>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Low-Stock Medicines</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Low-Stock Medicines</h6>
             <table className="w-full mt-3">
               <thead className="bg-highlight dark:bg-highlight text-white">
                 <tr>
@@ -259,7 +256,7 @@ const Dashboard = () => {
             </table>
           </div>
           <div className="bg-lightCard dark:bg-card p-6 rounded-lg shadow-md">
-            <h6 className="text-grayText dark:text-grayText">Expiring Medicines</h6>
+            <h6 className="text-gray-700 dark:text-grayText">Expiring Medicines</h6>
             <table className="w-full mt-3">
               <thead className="bg-highlight dark:bg-highlight text-white">
                 <tr>

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchInvoices } from "../../features/InventorySlice";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout";
+import FullPageLoader from "../../components/FullPageLoader";
 
 const Invoices = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Invoices = () => {
     dispatch(fetchInvoices());
   }, [dispatch]);
 
-  if (loading) return <div className="text-center text-xl">Loading...</div>;
+  if (loading) return <FullPageLoader />
 
   let errorMessage = "";
   if (error) {

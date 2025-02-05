@@ -101,23 +101,23 @@ const Settings = () => {
                   </h2>
                   <div className="space-y-3">
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Name:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Name:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{pharmacy?.name}</span>
                     </div>
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Owner:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Owner:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{pharmacy?.owner_name}</span>
                     </div>
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Email:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Email:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{pharmacy?.email}</span>
                     </div>
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Phone:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Phone:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{pharmacy?.phone}</span>
                     </div>
                     <div className="pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Address:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Address:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{pharmacy?.address}</span>
                     </div>
                   </div>
@@ -133,23 +133,23 @@ const Settings = () => {
                   <h2 className="text-2xl font-semibold text-darkText dark:text-white mb-4 text-center">User Details</h2>
                   <div className="space-y-3">
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Username:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Username:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{user?.username}</span>
                     </div>
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Email:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Email:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{user?.email}</span>
                     </div>
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">First Name:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">First Name:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{user?.first_name || 'None'}</span>
                     </div>
                     <div className="border-b border-gray-300 dark:border-gray-600 pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Last Name:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Last Name:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{user?.last_name || 'None'}</span>
                     </div>
                     <div className="pb-2">
-                      <strong className="text-grayText dark:text-gray-400">Role:</strong> 
+                      <strong className="text-gray-700 dark:text-gray-400">Role:</strong> 
                       <span className="text-darkText dark:text-white ml-2">{user?.role}</span>
                     </div>
                   </div>

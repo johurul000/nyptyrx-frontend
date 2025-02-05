@@ -103,7 +103,7 @@ const SideBar = ({ isOpen, toggleSidebar}) => {
         <div className='mt-auto'>
           <button 
             onClick={handleLogout} 
-            className='w-full flex items-center text-darkText dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded'>
+            className='w-full flex items-center text-darkText dark:text-white hover:bg-[#dbecff] dark:hover:bg-gray-700 p-2 rounded'>
             <span className='w-6 flex justify-center'>
               <TbLogout className='h-6 w-6'/>
             </span> 

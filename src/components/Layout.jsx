@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { Navigate, useNavigate } from 'react-router-dom'
 import SideBar from './SideBar'
 import NavBar from './NavBar'
+import FullPageLoader from './FullPageLoader'
 
 const Layout = ({ children }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -24,7 +25,7 @@ const Layout = ({ children }) => {
     }, [user])
 
     if (isLoading){
-        return <div>Loading...</div>
+        return <FullPageLoader />
     }
     
     if (!isAuthenticated) {

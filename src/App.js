@@ -13,6 +13,7 @@ import CreateInvoice from './inventory/pages/CreateInvoice';
 import ViewInvoice from './inventory/pages/ViewInvoice';
 import Invoices from './inventory/pages/Invoices';
 import Settings from './auth_system/pages/Settings';
+import DemoLogin from './auth_system/pages/DemoLogin';
 
 function App() {
   const dispatch = useDispatch()
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home/>}></Route>
         <Route path='login/' element={<Login/>}></Route>
+        <Route path='demo-login/' element={<DemoLogin/>}></Route>
         <Route path='register/' element={<Register/>}></Route>
         <Route path='dashboard/' element={<Dashboard/>}></Route>
 
