@@ -316,7 +316,7 @@ const authSlice = createSlice({
         builder
         .addCase(register.fulfilled, (state) => {
             state.isLoading = false
-            state.message = 'Registration successful'
+            state.message = ''
         })
         .addCase(register.pending, (state) => {
             state.isLoading = true
